@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System Dashboard</title>
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            color: #333;         
+			background-image: url(back.png);
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #0077B6; 
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            text-align: center;
+			padding-left: 13px;
+			font-weight: bold;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 30px;
+            text-align: center; 
+			padding-left:-5px;
+			background-color: #00A5CF;
+			padding: 5px;
+			border-radius: 5px;
+        }
+
+        .nav-link {
+            width: 100%;
+            padding: 15px 20px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .nav-link:hover {
+            background-color: #023E8A;
+        }
+
+        .nav-link img {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+		
+		.login{
+			margin-top: 280px;
+			align-items: center;
+			background-color: ;
+			text-align: center;
+			padding: 5px 90px;
+			
+		}
+		
+		.login img {
+			width: 50px;
+            height: 50px;
+			
+		
+		}
+		
+        .content {
+            flex-grow: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+			text-align: center ;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: white;
+			background-color: #0077B6;
+			border-radius: 8px;
+			padding-top : 13px;
+			padding-bottom: 13px;
+        }
+
+		.content p {
+			text-align: center ;
+			padding-bottom: 50px;
+		}
+		
+        .dashboard-cards {
+			margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon img {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 12px;
+			margin-top: 12px;
+        }
+
+		
+		#return.card { 
+			padding-bottom: 15px;
+		}
+		
+		table { 
+			width: 100%; 
+			border-collapse: collapse; 
+		}
+		
+        th { 
+			padding: 12px; 
+			border: 1px solid #ddd; 
+			text-align: center; 
+		}
+		
+		td { 
+			padding: 10px; 
+			border: 1px solid #ddd; 
+			text-align: center; 
+		}
+		
+		footer {
+			background-color: ;
+			color: black;
+			text-align: center;
+			padding-top: 40px;
+			margin-top: 50px;
+			font-size: 14px;
+			bottom: 0;
+			width: 100%;			
+		}
+		
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>LMS Dashboard</h2>
+		<a href="home.html" class="nav-link">
+            <img src="home.png" alt="Home Icon"> Home
+        </a>
+		<a href="Search.html" class="nav-link">
+            <img src="searching.png" alt="Search Icon"> Search Books
+        </a>
+        <a href="return.html" class="nav-link">
+            <img src="return.png" alt="Borrow Icon"> Borrow/Return Books
+        </a>
+        <a href="Booklist.html" class="nav-link" >
+            <img src="list.png" alt="Book List Icon"> Book List
+        </a>
+        <a href="add.html" class="nav-link">
+            <img src="add.png" alt="Add Book Icon"> Add New Book
+        </a>
+		<div class = "login">
+			<img src="user.png" alt="Login Icon"><br>
+			<h3>Anju</h3>
+		</div>
+		
+    </div>
+
+    <div class="content">
+        <h1>Library Management System</h1>
+        <p><mark></mark></p>
+        <div class="dashboard-cards">           
+			<div class="card">
+				<h2>Overdue Book List</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Book ID</th>
+							<th>Title</th>
+							<th>Author</th>
+							<th>Genre</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>The Great Gatsby</td>
+							<td>F. Scott Fitzgerald</td>
+							<td>Adventure</td>
+							<td style = "color: red;"><b>Over due</b></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Nil Katarol</td>
+							<td>Mohan Raj. Madawala</td>
+							<td>Novel</td>
+							<td style = "color: red;"><b>Over due</b></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>The famouse five</td>
+							<td>Enid britten</td>
+							<td>Sci-fiction</td>
+							<td style = "color: red;"><b>Over due</b></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+        </div>
+		<div>
+			<footer>
+				<p>&copy; <b>2024 Library Management System. All rights reserved.</b></p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>
